@@ -16,9 +16,7 @@ import { CounterComponent } from './counter/counter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({
-      counter: counterReducer
-    }),
+    StoreModule.forRoot({}),
     StoreModule.forFeature('counter', counterReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
