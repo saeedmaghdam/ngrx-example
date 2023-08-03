@@ -1,7 +1,19 @@
 <h2>counter works!</h2>
 
-<h4>Current Count: {{count$ | async}}</h4>
+<div>
+  <h3>Counter</h3>
+  <h4>Current Count: {{ count$ | async }}</h4>
 
-<button (click)="increment()">Increment</button>
-<button (click)="decrement()">Decrement</button>
-<button (click)="reset()">Reset</button>
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
+  <button (click)="reset()">Reset</button>
+</div>
+
+<div>
+  <h3>Advanced Counter</h3>
+  <h4>Current Count: {{ advancedCount$ | async }}</h4>
+
+  <button (click)="advancedIncrement()">Increment</button>
+  <button (click)="advancedDecrement()">Decrement</button>
+  <button (click)="advancedReset()">Reset</button>
+</div>

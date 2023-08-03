@@ -7,6 +7,7 @@ import { counterReducer } from 'src/store/reducers/counter.reducers';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CounterComponent } from './counter/counter.component';
+import { advancedCounterReducer } from 'src/store/reducers/advancedCounter.reducer';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CounterComponent } from './counter/counter.component';
     AppRoutingModule,
     StoreModule.forRoot({}),
     StoreModule.forFeature('counter', counterReducer),
+    StoreModule.forFeature('advancedCounter', advancedCounterReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       // logOnly: !isDevMode(), // Restrict extension to log-only mode
